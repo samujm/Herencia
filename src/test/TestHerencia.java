@@ -12,10 +12,12 @@ public class TestHerencia {
         System.out.println("empleado1 = " + empleado1);
 
         System.out.println("\n");
+        
+        var fecha = new Date();//Se crea el objeto fecha por separado para no tener problema al ejecutar paso a paso
 
-        Cliente cliente1 = new Cliente(new Date(),true, "samu", 'F', 27, "Pachuca");
+        Cliente cliente1 = new Cliente(fecha, true, "samu", 'F', 27, "Pachuca"); //se pasa la variable
         System.out.println("cliente = " + cliente1);
-        Cliente cliente2 = new Cliente(new Date(), false, "Hakku", 'M', 32, "Sinaloa");
+        Cliente cliente2 = new Cliente(fecha, false, "Hakku", 'M', 32, "Sinaloa");
         System.out.println("cliente = " + cliente2);
     }
 }
