@@ -10,9 +10,16 @@ public class Empleado extends Persona {
     private double sueldo;
     private static int contadorEmpleado;
 
-    public Empleado(String nombre, double sueldo) { //Constructor con dos atributos
-        super(nombre); //Manda llamar el constructor de la clase padre
+    public Empleado() {
+        // super(); esto no es requerido pero se hace una llamada
         this.idEmpleado = ++Empleado.contadorEmpleado;
+    }
+
+    public Empleado(String nombre, double sueldo) { //Constructor con dos atributos
+        //super(nombre); //Manda llamar el constructor de la clase padre
+        //NO SE PUEDE UTILIZAR SUPER Y THIS ASI QUE COMENTO LA LINEA DE ARRIBA
+        this(); //SE MANDA LLAMAR EL CONSTRUCTOR SIN ARGUMENTOS O VACIO
+        this.nombre = nombre; 
         this.sueldo = sueldo;
     }
 
